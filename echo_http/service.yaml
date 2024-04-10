@@ -4,8 +4,8 @@ metadata:
   name: echo-http-service
 spec:
   ports:
-    - port: 8080
-      targetPort: 8000
+    - port: 8000
+      targetPort: 8080
       protocol: TCP
   selector:
     app: echo-http
