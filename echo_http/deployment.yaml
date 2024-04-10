@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo_http
+  labels:
+    app: echo_http
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo_http
+  template:
+    metadata:
+      labels:
+        app: echo_http
+    spec:
+      containers:
+      - image: mendhak/http-https-echo:33
+        name: echo_http
+        imagePullPolicy: Always
